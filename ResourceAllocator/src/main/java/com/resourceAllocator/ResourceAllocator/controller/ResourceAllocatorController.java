@@ -15,6 +15,10 @@ import com.resourceAllocator.ResourceAllocator.model.ResourceAllocatorModel;
 import com.resourceAllocator.ResourceAllocator.model.ResultModel;
 import com.resourceAllocator.ResourceAllocator.service.ResourceAllocatorService;
 
+/**
+ * @author USHANANDHINI K
+ *
+ */
 @RestController
 @RequestMapping(path = "/resource")
 public class ResourceAllocatorController {
@@ -37,5 +41,4 @@ public class ResourceAllocatorController {
 		resultModel.setServerDetails(entityList);
 		return  resultModel;
 	}
-	
 }

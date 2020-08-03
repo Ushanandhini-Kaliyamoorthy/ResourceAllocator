@@ -2,6 +2,10 @@ package com.resourceAllocator.ResourceAllocator.entity;
 
 import java.util.Map;
 
+/**
+ * @author USHANANDHINI K
+ *
+ */
 public class ResultEntity{
 	
 	private String region;

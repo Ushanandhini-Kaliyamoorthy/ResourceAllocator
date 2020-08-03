@@ -5,6 +5,10 @@ import org.springframework.stereotype.Repository;
 
 import com.resourceAllocator.ResourceAllocator.entity.ServerDetailsEntity;
 
+/**
+ * @author USHANANDHINI K
+ *
+ */
 @Repository
 public interface ServerDetailsRepository extends JpaRepository<ServerDetailsEntity,Integer> {
 	

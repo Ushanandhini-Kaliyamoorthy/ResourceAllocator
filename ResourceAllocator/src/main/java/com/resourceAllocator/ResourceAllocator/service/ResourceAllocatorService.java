@@ -18,5 +18,4 @@ public interface ResourceAllocatorService {
 	 * getServerDetails used to fetch the CPU details with minimum cost
 	 */
 	List<ResultEntity> getServerDetails(ResourceAllocatorModel resourceAllocatorModel);
-	
 }

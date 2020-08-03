@@ -5,8 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/**
+ * @author USHANANDHINI K
+ *
+ */
 @Entity
-@Table(name="server_details_entity")
+@Table(name="server_details")
 public class ServerDetailsEntity{
 	
 	@Id
@@ -31,5 +36,4 @@ public class ServerDetailsEntity{
 	public void setRegion(String region) {
 		this.region = region;
 	}
-
 }

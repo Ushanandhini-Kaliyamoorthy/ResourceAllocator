@@ -1,5 +1,9 @@
 package com.resourceAllocator.ResourceAllocator.model;
 
+/**
+ * @author USHANANDHINI K
+ *
+ */
 public class ResourceAllocatorModel {
 	
 	private int cpuCount;
@@ -31,5 +35,4 @@ public class ResourceAllocatorModel {
 	public void setHours(int hours) {
 		this.hours = hours;
 	}
-
 }

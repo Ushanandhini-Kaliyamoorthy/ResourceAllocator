@@ -1,9 +1,9 @@
-INSERT INTO server_details_entity(server_id,region) VALUES
+INSERT INTO server_details(server_id,region) VALUES
 (1, 'us-east'),
 (2, 'us-west'),
 (3, 'asia');
  
-INSERT INTO cpu_details_entity(cpu_id,server_id,server_type, server_capacity, cost_per_hour) VALUES
+INSERT INTO cpu_details(cpu_id,server_id,server_type, server_capacity, cost_per_hour) VALUES
 (101, 1, 'large',   1, 0.12),
 (102, 1, 'xlarge',  2, 0.23),
 (103, 1, '2xlarge', 4, 0.45),

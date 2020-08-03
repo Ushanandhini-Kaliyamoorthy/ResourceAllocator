@@ -9,6 +9,10 @@ import org.springframework.stereotype.Repository;
 import com.resourceAllocator.ResourceAllocator.entity.CpuDetailsEntity;
 
 
+/**
+ * @author USHANANDHINI K
+ *
+ */
 @Repository
 public interface CpuDetailsRepository extends JpaRepository<CpuDetailsEntity,Integer> {
 

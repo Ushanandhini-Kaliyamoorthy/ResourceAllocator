@@ -6,8 +6,12 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
+/**
+ * @author USHANANDHINI K
+ *
+ */
 @Entity
-@Table(name="cpu_details_entity")
+@Table(name="cpu_details")
 public class CpuDetailsEntity{
 	
 	@Id

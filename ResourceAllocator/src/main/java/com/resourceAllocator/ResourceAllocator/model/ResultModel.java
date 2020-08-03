@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.resourceAllocator.ResourceAllocator.entity.ResultEntity;
 
+/**
+ * @author USHANANDHINI K
+ *
+ */
 public class ResultModel {
 	
 	private List<ResultEntity> serverDetails;
@@ -15,5 +19,4 @@ public class ResultModel {
 	public void setServerDetails(List<ResultEntity> serverDetails) {
 		this.serverDetails = serverDetails;
 	}
-	
 }
