@@ -57,6 +57,12 @@ public class ResourceAllocatorServiceImpl implements ResourceAllocatorService{
 	/* The constant INDEX*/
 	private static final int INDEX = 0;
 	
+	/**
+	 *  getServerDetails used to fetch the CPU details with minimum cost
+	 *  
+	 *  @param resourceAllocatorModel contains input
+	 *  @return listEntity
+	 */
 	@Override
 	public List<ResultEntity> getServerDetails(ResourceAllocatorModel resourceAllocatorModel) {
 		List<ServerDetailsEntity> serverEntity = serverDetailsRepository.findAll();
@@ -126,8 +132,12 @@ public class ResourceAllocatorServiceImpl implements ResourceAllocatorService{
 		return listEntity;
 	}
 	
-	/*
+	/**
 	 * getSortedMap used to sort the serveType based on serverCost
+	 * 
+	 * @param cpuEntity contains CPU details
+	 *        cpuStack contains serverType
+	 *        priceStack contains server price
 	 */
 	public void getSortedMap(List<CpuDetailsEntity> cpuEntity,Stack<Integer> cpuStack, Stack<Float> priceStack) {
 		Map<String, Float> costPerHourMap = new HashMap<>();
@@ -147,15 +157,19 @@ public class ResourceAllocatorServiceImpl implements ResourceAllocatorService{
 		});
 	}
 	
-	/*
+	/**
 	 * setServerType used to map the serverType and serverCapacity
+	 * 
+	 * @param cpuEntity contains CPU details
+	 *        serverCapacityMap contains serverCapacity
+	 *        serverTypeMap contains serverType
 	 */
-	public void setServerType(List<CpuDetailsEntity> cpuEntity, Map<String, Integer> serverCapacity, 
-			Map<Integer, String> serverType) {
+	public void setServerType(List<CpuDetailsEntity> cpuEntity, Map<String, Integer> serverCapacityMap, 
+			Map<Integer, String> serverTypeMap) {
 		cpuEntity.forEach(action -> {
 			if(Objects.nonNull(action.getServerType()) && Objects.nonNull(action.getServerCapacity())) {
-				serverCapacity.put(action.getServerType(), action.getServerCapacity());
-				serverType.put(action.getServerCapacity(), action.getServerType());
+				serverCapacityMap.put(action.getServerType(), action.getServerCapacity());
+				serverTypeMap.put(action.getServerCapacity(), action.getServerType());
 			}
 		});
 	}

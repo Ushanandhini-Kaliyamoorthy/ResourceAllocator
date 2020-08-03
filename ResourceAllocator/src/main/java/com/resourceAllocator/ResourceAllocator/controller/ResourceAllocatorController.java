@@ -22,8 +22,11 @@ public class ResourceAllocatorController {
 	@Autowired
 	ResourceAllocatorService resourceAllocatorService;
 	
-	/*
+	/**
 	 * getResourceDetails used to get the server details for given requirement
+	 * 
+	 * @param resourceAllocatorModel holds input data
+	 * @return resultModel
 	 */
 	@GetMapping(value= "/getResource")
 	public ResultModel getResourceDetails(@RequestBody ResourceAllocatorModel resourceAllocatorModel) {
